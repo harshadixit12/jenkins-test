@@ -8,7 +8,7 @@ pipeline {
       steps {
         sh '''
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" >> output.sh
-          chmod -x output.sh
+          chmod +x output.sh
           output.sh
           ls -r /usr/local/bin
           export PATH="/usr/local/bin:$PATH"

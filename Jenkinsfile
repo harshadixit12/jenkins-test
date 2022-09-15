@@ -10,7 +10,7 @@ pipeline {
         echo "Current workspace is ${env.WORKSPACE}"
         echo "Current value of path: ${PATH}"
         echo "location of postman: "
-        where postman
+        sh 'command -v postman'
       }
     }
 

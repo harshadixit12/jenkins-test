@@ -7,7 +7,9 @@ pipeline {
     stage('Install Postman CLI') {
       steps {
         sh '''
-          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" >> output.sh
+          chmod -x output.sh
+          output.sh
           ls -r /usr/local/bin
           export PATH="/usr/local/bin:$PATH"
           postman login --with-api-key PMAK-6322a364df32ad74cdd88dcc-bc3042d8d717325f2e2001b5ce65765762

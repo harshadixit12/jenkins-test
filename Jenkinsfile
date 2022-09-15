@@ -7,7 +7,7 @@ pipeline {
     stage('Install Postman CLI') {
       steps {
         sh 'curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh'
-        export PATH="/usr/local/bin:$PATH"
+        sh 'export PATH="/usr/local/bin:$PATH"'
         echo "Current workspace is ${env.WORKSPACE}"
         echo "Current value of path: ${PATH}"
         echo "Now, we login from path:"

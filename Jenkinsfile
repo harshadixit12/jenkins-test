@@ -9,7 +9,6 @@ pipeline {
         sh 'curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh'
         echo "Current workspace is ${env.WORKSPACE}"
         echo "Current value of path: ${PATH}"
-        sh 'command -v postman'
       }
     }
 

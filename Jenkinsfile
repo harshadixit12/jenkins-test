@@ -14,6 +14,8 @@ pipeline {
 
     stage('Postman CLI Login') {
       steps {
+        echo "Now, we login from path:"
+        echo "${PATH}"
         sh 'postman login --with-api-key PMAK-6322a364df32ad74cdd88dcc-bc3042d8d717325f2e2001b5ce65765762'
         }
     }
